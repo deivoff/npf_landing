@@ -1,2 +1,15 @@
-mixin footer(data)
-    footer.footer
+include ../../../node_modules/bemto.pug/bemto.pug
+
+mixin footer()
+    +b.FOOTER.n-footer
+        .container.container_fluid
+            .columns
+                .column_md-12.column_xs-12
+                    .n-flex-row
+                        a(href='#').n-logo
+                        +e.A.link(href='#') Официальный сайт НПФ Сбербанка
+                        +b.n-block_phone
+                            +e.text Горячая линия
+                            +e.A.tel(href='tel:88005550041') 8 800 555 00 41
+                .column_md-12.column_xs-12
+                    +e.copyright &copy; 2009-2019 НПФ Сбербанка | Лицензия №41/2 от 16.06.2009 г. выдана Федеральной службой по финансовым рынкам.

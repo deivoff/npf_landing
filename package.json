@@ -6,7 +6,10 @@
   "directories": {},
   "dependencies": {
     "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5"
+    "@babel/preset-env": "^7.4.5",
+    "autoprefixer": "^9.5.0",
+    "bemto.pug": "^2.1.0",
+    "rupture": "^0.7.1"
   },
   "devDependencies": {
     "gulp": "^3.9.1"

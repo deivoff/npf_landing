@@ -1,0 +1,30 @@
+.n-banner
+  height 100%
+  width 100%
+  background-size cover
+  background-position 85% 0%
+  background-repeat no-repeat
+  background-image url(%=static=%content/desktop/banner.jpg)
+  position relative
+  &.n-section
+    padding-top 130px
+    +below('xs')
+      padding 40px 0px 35px
+    .n-section__title
+      font-size 48px
+      line-height 1.17
+      +below('md')
+        font-size 32px
+        line-height 1.25
+
+    .n-button 
+      margin-top 82px
+      +below('md')
+        margin-top 152px
+  +below('xs')
+    background-image url(%=static=%content/mobile/banner01.jpg)
+    background-position 40% 0%
+    max-height none
+  
+  
+  

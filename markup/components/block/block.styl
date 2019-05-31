@@ -1,0 +1,54 @@
+.n-block
+  margin-top 32px
+  &__text
+    margin-top 32px
+    font-size 16px
+    line-height 1.38
+    letter-spacing 0.3px
+  &_example
+    display flex
+    width calc(100% - 30px)
+    border-right 1px solid #cfd3d6
+    padding-right 65px
+    +below('xs')
+      padding-right 0
+      padding-bottom 32px
+      border-right none
+      width: 100%
+      border-bottom: 1px solid #cfd3d6
+    .n-block__text
+      margin-top 0
+      margin-left 36px
+  &_number
+    .n-block__text
+      font-size 12px
+      letter-spacing normal
+      line-height normal
+      color #3d4348
+      margin 0
+    .n-block__number
+      font-size 48px
+      font-weight 300
+      line-height normal
+      color #ffa715
+      small
+        font-size 24px
+      + .n-block__text
+        margin-top 0
+  
+  &_phone
+    margin-top 0
+    .n-block__text
+      margin-top 0
+      font-size 14px
+      font-weight 300
+      line-height 1.79
+      letter-spacing normal
+      color #3d4349
+    .n-block__tel
+      font-size 20px
+      font-weight 500
+      line-height 1.5
+      color #3d4349
+      text-decoration none
+

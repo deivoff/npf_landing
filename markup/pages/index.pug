@@ -1,25 +1,105 @@
 doctype html
 html(class="no-js", lang="ru")
 
+    include ../../node_modules/bemto.pug/bemto.pug
     include ../components/head/head.pug
     include ../components/example/example.pug
     include ../components/footer/footer.pug
+    include ../components/header/header.pug
 
     head
         +head(head.defaults)
     body.page
         |%=symbols=%
+        +header
+        main.n-main
+            +b.SECTION.n-section.n-banner
+                .container.container_fluid
+                    .columns
+                        .column_md-7.column_xs-10
+                            +e.title.col Индивидуальный <br>Пенсионный План «Целевой»
+                            +e.subtitle Для поколений, планирующих своё будущее
+                            +e.description Индивидуальный пенсионный план (ИПП) — это инструмент, позволяющий сформировать пенсию желаемого размера за счет самостоятельных взносов и инвестиционного дохода Фонда
+                        .column_md-12.column_xs-12
+                            a.n-button(href='#') Оформить
+            section.n-section.grey
+                .container.container_fluid
+                    .columns
+                        .column_md-12
+                            .n-section__title В чем суть?
+                        .column_md-4
+                            +b.n-block
+                                +e.icon
+                                    include ../static/img/content/icons/file.svg
+                                +e.text Вы заключаете договор и вносите первоначальный взнос на свой пенсионный счет — 2 000 ₽ или больше.
+                        .column_md-4
+                            +b.n-block
+                                +e.icon
+                                    include ../static/img/content/icons/money.svg
+                                +e.text Регулярно уплачиваете взносы — от 1 000 ₽ каждый месяц.
+                        .column_md-4
+                            +b.n-block
+                                +e.icon
+                                    include ../static/img/content/icons/shield.svg
+                                +e.text Перечисляя на свой счет от 12 000 ₽ или более в год, вы сможете зафиксировать целевой размер пенсии, который позволит вам сохранить приемлемый уровень дохода в будущем, и его рост с каждым последующим взносом будет отражаться в Личном кабинете.  
+            section.n-section
+                .container.container_fluid
+                    .columns
+                        .column_md-12
+                            .n-section__title Какие гарантии?
+                        .column_md-4
+                        .column_md-4
+                            +b.n-block
+                                +e.icon
+                                    include ../static/img/content/icons/money.svg
+                                +e.text Целевой размер пенсии рассчитывается с учетом нормативной доходности, которая устанавливается Фондом и в 2019 году составляет 3,5%. Это тот уровень доходности, который «страхует» накопления от волатильности на финансовых рынках.
+                        .column_md-4
+                            +b.n-block
+                                +e.icon
+                                    include ../static/img/content/icons/file.svg
+                                +e.text Исторически Фонд зарабатывает больше нормативной доходности: за последние три года накопленная среднегодовая доходность, заработанная Фондом для своих клиентов по ИПП, составила 7,15% при накопленной среднегодовой инфляции  за этот же период времени 4,05% годовых. По итогам года на пенсионный счет будет начислена большая из доходностей.  
+                        .column_md-12.column_xs-12
+                            a.n-button(href='#') Оформить
+            section.n-section.grey
+                .container.container_fluid
+                    .columns
+                        .column_md-12
+                            .n-section__title Какой будет ваша пенсия?
+                        .column_md-5
+                            +b.n-block_example
+                                +e.icon
+                                    include ../static/img/content/icons/arrow_man.svg
+                                +e.text Допустим, <b>35-летний</b> мужчина начал откладывать <b>по 2000 ₽</b> в месяц, а <b>в 65 лет</b> выйдет на пенсию.  
+                        .column_md-3
+                            +b.n-block_number
+                                +e.text К 65 годам накопит:
+                                +e.number
+                                    b 2,30&nbsp;
+                                    small млн. ₽
+                                +e.text из них <b>1,58 млн. ₽</b> — инвестиционный доход.
+                        .column_md-4
+                            +b.n-block_number
+                                +e.text В течение 15 лет каждый месяц он будет получать около:
+                                +e.number 
+                                    b 12 800&nbsp;
+                                    small ₽
+                                +e.text от НПФ Сбербанка <b>в дополнение к государственной пенсии.</b>
+                        .column_md-6.column_sm-12
+                            +b.n-card
+                                +e.icon
+                                    include ../static/img/content/icons/arrow_man.svg
+                                +e.title Кто может претендовать на накопления?
+                                +e.text Накопленные средства на счете останутся полностью вашими даже в случае раздела имущества, например во время развода. При этом накопления передаются по наследству.
+                        .column_md-6.column_sm-12
+                            +b.n-card
+                                +e.icon
+                                    include ../static/img/content/icons/arrow_man.svg
+                                +e.title Как следить за будущей пенсией? 
+                                +e.text В Личном кабинете на сайте или в мобильном приложении. Там же можно подключить автоплатёж, чтобы не думать о переводах и не тратить на них время. На взносы  действует социальный налоговый вычет: можно вернуть 13% с суммы взносов до 120 000 рублей в год.
+                        .column_md-12.column_sm-12.column_xs-12
+                            a.n-button(href='#') Оформить
 
-        section.page__wrapper
-
-            //- Include your components here
-            +example()
-
-            .page__buffer
-
-        .page__footer
-            +footer()
-
+        +footer
         script(src='%=static=%js/separate-js/svg4everybody.min.js')
         script svg4everybody();
 

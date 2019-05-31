@@ -1,11 +1,103 @@
 // Common styles of the project
+@import '../fonts/stylesheet.css'
+@import '../../../node_modules/rupture/rupture'
+
+
+$xs = 576px
+$sm = 768px
+$md = 992px
+$lg = 1200px
+
+rupture.scale = 0 $xs $sm $md $lg 
+rupture.scale-names = 'xs' 'sm' 'md' 'lg' 'xl'
+rupture.anti-overlap = true
+
+$columns = 12
+
+// Grid
+.container
+    margin auto
+    padding 0 15px
+    width calc(100% - 30px)
+    &_fluid
+        max-width 1200px
+
+
+
+.columns
+    display flex
+    flex-flow row wrap
+    flex-shrink 1
+    margin 0 -15px
+    min-width 100%
+    height 100%
+    align-items stretch
+
+    > div
+        padding 0 30px
+        box-sizing border-box
+
+
+column($preffix, $columns)
+    for $column in 1..$columns
+
+        .column{$preffix}-{$column}
+            display flex
+            flex-flow column nowrap
+            width percentage($column/$columns)
+
+.column_md-6 
+    & > .n-card
+        margin-top 64px
+        +above('sm')
+            margin-top 80px
+    & + .column_md-6
+        & > .n-card
+            margin-top 32px
+            +above('sm')
+                margin-top 80px
+    +above('sm')
+        & > .n-card
+            width calc(100% + 15px)
+        & + .column_md-6
+            & > .n-card
+                margin-left -15px
+                width calc(100% +15px)
+
+    
+
+.column
+    padding 0 0px
+    width 100%
+    display flex
+    flex-flow column nowrap
+    align-items stretch
+
+    & > div
+        width 100%
+
+
+column('_xs', $columns)
+
++above('xs')
+    column('_sm', $columns)
+
++above('sm')
+    column('_md', $columns)
+
++above('md')
+    column('_lg', $columns)
+
++above('lg')
+    column('_xl', $columns)
+
 
 html, body
     height 100%
+    font-family 'SeroPro'
+    width 100%
+    overflow-x hidden
 
-
-.page
-    // Стили для body
 
 .page__wrapper
     min-height 100%
@@ -17,3 +109,34 @@ html, body
 
 .page__buffer
     height 50px
+
+
+.n-flex-row
+    display flex
+    flex-flow row nowrap
+    +below('md')
+        flex-flow column nowrap
+    & > .n-footer__link
+        order 2
+        margin-left 60px
+        align-self center
+        +below('md')
+            order 3
+            margin-left 0
+            margin-top 27px
+            align-self flex-start
+    & > .n-block_phone
+        order 3
+        margin-left auto
+        +below('md')
+            order 2
+            margin-left 0
+            margin-top 24px
+
+.n-logo
+    width 240px
+    height 44px
+    background-image url(%=static=%content/logo/Bitmap.jpg)
+
+.overflow-hidden
+    overflow hidden

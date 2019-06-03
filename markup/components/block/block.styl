@@ -5,6 +5,10 @@
     font-size 16px
     line-height 1.38
     letter-spacing 0.3px
+    &_grey
+      font-size 14px
+      letter-spacing 0.3px
+      color #9c9fa2
   &_example
     display flex
     width calc(100% - 30px)
@@ -14,8 +18,8 @@
       padding-right 0
       padding-bottom 32px
       border-right none
-      width: 100%
-      border-bottom: 1px solid #cfd3d6
+      width 100%
+      border-bottom 1px solid #cfd3d6
     .n-block__text
       margin-top 0
       margin-left 36px
@@ -51,4 +55,22 @@
       line-height 1.5
       color #3d4349
       text-decoration none
+  &_chart
+    position relative
+    height 0
+    width 100%
+    padding 0
+    padding-bottom 100%
+    svg 
+      position absolute
+      height 100%
+      width 100%
+      left 0
+      top 0
 
+[data-aos="numbers"]
+  opacity 0
+  transition-property transform, opacity
+
+  &.aos-animate 
+    opacity 1

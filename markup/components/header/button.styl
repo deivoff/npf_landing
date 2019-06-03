@@ -1,3 +1,4 @@
+.n-close
 .n-menu
   max-height 40px
   max-width 40px
@@ -23,3 +24,18 @@
       top 19px
     &:nth-child(3)
       top 28px
+
+.n-close
+  position absolute
+  top 24px
+  right 22px
+  span
+    &:nth-child(1)
+      top 15px
+      transform: rotate(45deg)
+    &:nth-child(2)
+      top 15px
+      transform: rotate(-45deg)
+  +below('md')
+    top 21px
+    left 29px

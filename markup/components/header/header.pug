@@ -8,18 +8,25 @@ mixin header(data)
                             span
                             span
                             span
-                        +b.NAV.n-nav.js-nav
-                            +e.UL.list(title='Меню')
+                        +b.NAV.n-nav.js-nav(title='Меню')
+                            button.js-close.n-close
+                                span
+                                span
+                            +e.UL.list
                                 +e.elem
-                                    +e.A.link(href='#') В чем суть?
+                                    +e.A.link(href='#first').js-scroll В чем суть?
                                 +e.elem
-                                    +e.A.link(href='#') Какие гарантии?
+                                    +e.A.link(href='#second').js-scroll Какие гарантии?
                                 +e.elem
-                                    +e.A.link(href='#') Какой будет Ваша пенсия?
+                                    +e.A.link(href='#third').js-scroll Какой будет Ваша пенсия?
                                 +e.elem
-                                    +e.A.link(href='#') Как инвестируются средства?
+                                    +e.A.link(href='#forth').js-scroll Как инвестируются средства?
                                 +e.elem
-                                    +e.A.link(href='#') Для кого это?
+                                    +e.A.link(href='#fifth').js-scroll Для кого это?
+                            +e.phone
+                                +b.n-block_phone
+                                    +e.text Горячая линия
+                                    +e.A.tel(href='tel:88005550041') 8 800 555 00 41
                         a(href='#').n-logo
                         +b.n-block_phone
                             +e.text Горячая линия

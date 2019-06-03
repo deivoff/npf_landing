@@ -17,88 +17,101 @@ html(class="no-js", lang="ru")
                 .container.container_fluid
                     .columns
                         .column_md-7.column_xs-10
-                            +e.title.col Индивидуальный <br>Пенсионный План «Целевой»
-                            +e.subtitle Для поколений, планирующих своё будущее
-                            +e.description Индивидуальный пенсионный план (ИПП) — это инструмент, позволяющий сформировать пенсию желаемого размера за счет самостоятельных взносов и инвестиционного дохода Фонда
+                            +e.title(data-aos="fade-up" data-aos-delay="200") Индивидуальный <br>Пенсионный План «Целевой»
+                            +e.subtitle(data-aos="fade-up" data-aos-delay="300") Для поколений, планирующих своё будущее
+                            +e.description(data-aos="fade-up" data-aos-delay="400") Индивидуальный пенсионный план (ИПП) — это инструмент, позволяющий сформировать пенсию желаемого размера за счет самостоятельных взносов и инвестиционного дохода Фонда
                         .column_md-12.column_xs-12
-                            a.n-button(href='#') Оформить
-            section.n-section.grey
+                            a.n-button(href='https://npo.npfsb.ru/?type=goal&landing=npo&step=1' data-aos="fade-up" data-aos-delay="500") Оформить
+            +b.SECTION.n-section.grey#first
                 .container.container_fluid
                     .columns
                         .column_md-12
-                            .n-section__title В чем суть?
+                            +e.title(data-aos="fade-up" data-aos-delay="200") В чем суть?
                         .column_md-4
-                            +b.n-block
+                            +b.n-block(data-aos="fade-up" data-aos-delay="50")
                                 +e.icon
                                     include ../static/img/content/icons/file.svg
                                 +e.text Вы заключаете договор и вносите первоначальный взнос на свой пенсионный счет — 2 000 ₽ или больше.
                         .column_md-4
-                            +b.n-block
+                            +b.n-block(data-aos="fade-up" data-aos-delay="150")
                                 +e.icon
                                     include ../static/img/content/icons/money.svg
-                                +e.text Регулярно уплачиваете взносы — от 1 000 ₽ каждый месяц.
+                                +e.text  Регулярно уплачиваете взносы — от 1 000 ₽ каждый месяц.
                         .column_md-4
-                            +b.n-block
+                            +b.n-block(data-aos="fade-up" data-aos-delay="250")
                                 +e.icon
                                     include ../static/img/content/icons/shield.svg
                                 +e.text Перечисляя на свой счет от 12 000 ₽ или более в год, вы сможете зафиксировать целевой размер пенсии, который позволит вам сохранить приемлемый уровень дохода в будущем, и его рост с каждым последующим взносом будет отражаться в Личном кабинете.  
-            section.n-section
+            +b.SECTION.n-section#second
                 .container.container_fluid
                     .columns
                         .column_md-12
-                            .n-section__title Какие гарантии?
+                            +e.title(data-aos="fade-up") Какие гарантии?
                         .column_md-4
-                        .column_md-4
-                            +b.n-block
+                            +b.n-block_chart(data-aos="fade-up" data-aos-delay="50")
+                                include ../static/img/content/chart.svg
+                            +b.n-block(data-aos="fade-up" data-aos-delay="50")
+                                +e.text_grey Средневзвешенная структура инвестиционного портфеля средств пенсионных резервов за 1 квартал 2019 года.
+                        .column_md-4.margin-top-md-60
+                            +b.n-block(data-aos="fade-up" data-aos-delay="150")
                                 +e.icon
-                                    include ../static/img/content/icons/money.svg
+                                    include ../static/img/content/icons/shield2.svg
                                 +e.text Целевой размер пенсии рассчитывается с учетом нормативной доходности, которая устанавливается Фондом и в 2019 году составляет 3,5%. Это тот уровень доходности, который «страхует» накопления от волатильности на финансовых рынках.
-                        .column_md-4
-                            +b.n-block
+                        .column_md-4.margin-top-md-60
+                            +b.n-block(data-aos="fade-up" data-aos-delay="250")
                                 +e.icon
-                                    include ../static/img/content/icons/file.svg
+                                    include ../static/img/content/icons/chart-up.svg
                                 +e.text Исторически Фонд зарабатывает больше нормативной доходности: за последние три года накопленная среднегодовая доходность, заработанная Фондом для своих клиентов по ИПП, составила 7,15% при накопленной среднегодовой инфляции  за этот же период времени 4,05% годовых. По итогам года на пенсионный счет будет начислена большая из доходностей.  
                         .column_md-12.column_xs-12
-                            a.n-button(href='#') Оформить
-            section.n-section.grey
+                            a.n-button(href='https://npo.npfsb.ru/?type=goal&landing=npo&step=1' data-aos="fade-up") Оформить
+            +b.SECTION.n-section.grey#third
                 .container.container_fluid
                     .columns
                         .column_md-12
-                            .n-section__title Какой будет ваша пенсия?
+                            +e.title(data-aos="fade-up") Какой будет ваша пенсия?
                         .column_md-5
-                            +b.n-block_example
+                            +b.n-block_example(data-aos="fade-up")
                                 +e.icon
                                     include ../static/img/content/icons/arrow_man.svg
                                 +e.text Допустим, <b>35-летний</b> мужчина начал откладывать <b>по 2000 ₽</b> в месяц, а <b>в 65 лет</b> выйдет на пенсию.  
                         .column_md-3
-                            +b.n-block_number
+                            +b.n-block_number(data-aos="fade-up")
                                 +e.text К 65 годам накопит:
                                 +e.number
-                                    b 2,30&nbsp;
-                                    small млн. ₽
+                                    b(data-aos='numbers' data-aos-id='numbers') 2,30
+                                    small &nbsp; млн. ₽
                                 +e.text из них <b>1,58 млн. ₽</b> — инвестиционный доход.
                         .column_md-4
-                            +b.n-block_number
+                            +b.n-block_number(data-aos="fade-up")
                                 +e.text В течение 15 лет каждый месяц он будет получать около:
                                 +e.number 
-                                    b 12 800&nbsp;
-                                    small ₽
+                                    b(data-aos='numbers' data-aos-id='numbers') 12 800
+                                    small &nbsp; ₽
                                 +e.text от НПФ Сбербанка <b>в дополнение к государственной пенсии.</b>
                         .column_md-6.column_sm-12
-                            +b.n-card
+                            +b.n-card(data-aos="fade-up")
                                 +e.icon
-                                    include ../static/img/content/icons/arrow_man.svg
+                                    include ../static/img/content/icons/family.svg
                                 +e.title Кто может претендовать на накопления?
                                 +e.text Накопленные средства на счете останутся полностью вашими даже в случае раздела имущества, например во время развода. При этом накопления передаются по наследству.
                         .column_md-6.column_sm-12
-                            +b.n-card
+                            +b.n-card(data-aos="fade-up")
                                 +e.icon
-                                    include ../static/img/content/icons/arrow_man.svg
+                                    include ../static/img/content/icons/mobile.svg
                                 +e.title Как следить за будущей пенсией? 
                                 +e.text В Личном кабинете на сайте или в мобильном приложении. Там же можно подключить автоплатёж, чтобы не думать о переводах и не тратить на них время. На взносы  действует социальный налоговый вычет: можно вернуть 13% с суммы взносов до 120 000 рублей в год.
                         .column_md-12.column_sm-12.column_xs-12
-                            a.n-button(href='#') Оформить
-
+                            a.n-button(href='https://npo.npfsb.ru/?type=goal&landing=npo&step=1' data-aos="fade-up") Оформить
+            +b.SECTION.n-section#forth
+                .container.container_fluid
+                    .columns
+                        .column_md-8
+                            +e.title(data-aos="fade-up") Как инвестируются средства?
+                            +b.n-block(data-aos="fade-up" data-aos-delay="50")
+                                +e.text НПФ Сбербанка инвестирует накопленные средства и ежегодно начисляет инвестиционный доход. В основу управления активами заложены принципы оптимального соотношения доходности и надежности, что позволяет Фонду на протяжении последних лет существенно снизить влияние волатильности фондового рынка на результат инвестирования и обеспечивать своим клиентам реальный прирост пенсионных средств. Накопленная  доходность по индивидуальным пенсионным планам НПФ Сбербанка в период с 2000 по 2018 год составила 553,8%, в то время как накопленная инфляция за этот период – 534,5%.
+                        .column_md-4
+                            +b.n-image_circle(data-aos="fade-up" data-aos-delay="50")
+                                span
         +footer
         script(src='%=static=%js/separate-js/svg4everybody.min.js')
         script svg4everybody();

@@ -16,9 +16,20 @@
         margin-left auto
         width 175px
         height 32px
+        position relative
+        z-index 100 // Больше, чем у модального окна
 
     .n-block_phone
       margin-top -6px
       margin-left: auto 
       +below('md')
         display none
+
+.n-shadow
+  height 100vh
+  width 100vw
+  position fixed
+  z-index 20
+  top 0
+  left 0
+  background-color rgba(61, 67, 72, 0.7)

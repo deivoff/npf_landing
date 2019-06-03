@@ -6,6 +6,8 @@
   box-sizing border-box
   min-height calc(100% - 80px)
   flex-shrink 1
+  +below('md')
+    padding 33px
 
   &__title
     font-size 32px
@@ -16,11 +18,11 @@
     +below('md')
       font-size 24px
       line-height 1.33
-      margin-top 24px
+      margin-top 14px
 
 
   &__text
-    margin-top 24px
+    margin-top 16px
     font-size 16px
     line-height 1.38
     letter-spacing 0.3px

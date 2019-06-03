@@ -1,7 +1,7 @@
 // Common styles of the project
 @import '../fonts/stylesheet.css'
 @import '../../../node_modules/rupture/rupture'
-
+@import '../../../node_modules/aos/dist/aos.css'
 
 $xs = 576px
 $sm = 768px
@@ -96,7 +96,6 @@ html, body
     height 100%
     font-family 'SeroPro'
     width 100%
-    overflow-x hidden
 
 
 .page__wrapper
@@ -123,7 +122,7 @@ html, body
         +below('md')
             order 3
             margin-left 0
-            margin-top 27px
+            margin-top 11px
             align-self flex-start
     & > .n-block_phone
         order 3
@@ -139,4 +138,27 @@ html, body
     background-image url(%=static=%content/logo/Bitmap.jpg)
 
 .overflow-hidden
-    overflow hidden
+    overflow hidden 
+
+.justify-center
+    justify-content center
+
+.margin-top
+    &-md
+        +above('sm')
+            &-60
+                margin-top 60px
+
+.n-image
+    background-image url(%=static=%content/man1.jpg)
+    max-width 100%
+    background-position 50%
+    width 100%
+    &_circle
+        border-radius 100%
+        display inline-block
+        & > span 
+            height 0
+            margin 0
+            display block
+            padding 50% 20%

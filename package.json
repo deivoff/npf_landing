@@ -7,11 +7,14 @@
   "dependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
+    "aos": "^3.0.0-beta.6",
     "autoprefixer": "^9.5.0",
     "bemto.pug": "^2.1.0",
-    "rupture": "^0.7.1"
+    "rupture": "^0.7.1",
+    "smoothscroll-polyfill": "^0.4.4"
   },
   "devDependencies": {
+    "@babel/polyfill": "^7.4.4",
     "gulp": "^3.9.1"
   },
   "scripts": {
